@@ -1,0 +1,14 @@
+<app-banner [imageBanner]="banner.imgBanner" [textBanner]="banner.textBanner"></app-banner>
+<app-sub-banner [title]="subBanner.title" [content]="subBanner.content"></app-sub-banner>
+<section class="container-fluid" id="heart_touristic">
+    <div class="row">
+        <div class="col py-4 px-5">
+            <p class="title-subseccion">Explora el corazón turístico de Colombia</p>
+        </div>
+    </div>
+    <div class="row mx-5 my-4">
+        <div class="col" *ngFor="let card of cards">
+            <app-card [card]="card"></app-card>
+        </div>
+    </div>
+</section>

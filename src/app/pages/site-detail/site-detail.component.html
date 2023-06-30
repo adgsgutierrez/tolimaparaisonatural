@@ -1,0 +1,21 @@
+<section class="container-fluid px-5 my-4 d-block"  *ngIf="!load">
+    <div class="row" *ngFor="let detailItem of detail">
+      <div class="col">
+        <app-section-informative [detail]="detailItem"></app-section-informative>
+      </div>
+    </div>
+</section>
+
+<div class="position-absolute top-50 start-50 translate-middle" *ngIf="load">
+  <!-- <div class="position-absolute top-0 start-50 translate-middle">
+      <img src="/assets/imgs/icon.svg"/>
+  </div> -->
+  <img src="/assets/loader.gif"/>    
+  <p class="text-center" style="width: 207px;">
+      <br>
+      Consultando información del sitio,
+      <br>
+      <strong>Por favor, espera un momento.</strong>
+  </p>
+</div>
+

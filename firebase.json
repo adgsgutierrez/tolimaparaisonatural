@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "tolima.paraiso.natural",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

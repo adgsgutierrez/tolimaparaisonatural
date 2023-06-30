@@ -1,0 +1,59 @@
+.base-font{
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #171616;
+}
+
+.base-button-action{
+    background-color: var(--color_green);
+    color: white;
+}
+
+.card-title{
+    @extend .base-font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align:start;
+}
+
+.card-text{
+    @extend .base-font;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align:justify;
+}
+
+.card{
+    // width: 16.3srem;
+    width: 100%;
+    border-radius: 12px 12px 12px 12px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-align:end;
+
+    img {
+        border-radius: 0px;
+        max-height: 13rem;
+        object-fit: cover;
+    }
+}
+
+.btn-outline-primary{
+    color: var(--color_green);
+    border: 2px solid var(--color_green);
+    border-radius: 42px;
+    padding: 0.8rem;
+    text-align:end;
+    &:hover{
+        @extend .base-button-action;
+    }
+    &:focus-visible{
+        @extend .base-button-action;
+        box-shadow: var(--color_green);
+    }
+    &:active{
+        @extend .base-button-action;
+        border-color: var(--color_green);
+    }
+}

@@ -1,0 +1,24 @@
+.base-font{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.footer-personalize{
+    background-color: var(--color_green);
+    .row{
+        .col{
+            @extend .base-font;
+            font-weight: 400;
+        }
+        .col-2{
+            @extend .base-font;
+            font-weight: 700;
+            img{
+                filter: brightness(100);
+            }
+        }
+    }
+}

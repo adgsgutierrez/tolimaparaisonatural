@@ -1,0 +1,123 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+// @use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+//@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+// $tolima-paraiso-natural-primary: mat.define-palette(mat.$indigo-palette);
+// $tolima-paraiso-natural-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+// $tolima-paraiso-natural-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+// $tolima-paraiso-natural-theme: mat.define-light-theme((
+//   color: (
+//     primary: $tolima-paraiso-natural-primary,
+//     accent: $tolima-paraiso-natural-accent,
+//     warn: $tolima-paraiso-natural-warn,
+//   )
+// ));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+// @include mat.all-component-themes($tolima-paraiso-natural-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; min-height: 100vh; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+:root {
+    --background_banner_image_backup: '/assets/imgs/image-not-found.svg';
+    --color_green: #9AD239;
+}
+
+.title-subseccion{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #9AD239;
+}
+
+.base-font{
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #171616;
+}
+
+.base-button-action{
+    background-color: var(--color_green);
+    color: white;
+}
+
+.card-title{
+    @extend .base-font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align:start;
+}
+
+.card-text{
+    @extend .base-font;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    text-align:justify;
+}
+
+.card{
+    width: 16.3rem;
+    border-radius: 12px 12px 12px 12px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-align:end;
+}
+
+.base_button{
+    color: var(--color_green);
+    border: 2px solid var(--color_green);
+    border-radius: 42px;
+    padding: 0.8rem;
+    text-align:end;
+    &:hover{
+        @extend .base-button-action;
+    }
+    &:focus-visible{
+        @extend .base-button-action;
+        box-shadow: var(--color_green);
+    }
+    &:active{
+        @extend .base-button-action;
+        border-color: var(--color_green);
+    }
+}
+
+.btn-outline-primary{
+   @extend .base_button;
+}
+
+.btn-link{
+    @extend .base_button;
+    border: 2px solid white;
+    text-decoration: none;
+    &:hover{
+        color: var(--color_green);
+        border: 2px solid var(--color_green);
+        border-radius: 42px;
+        background-color: white;
+    }
+}

@@ -1,0 +1,43 @@
+.img-banner{
+    height: 26rem;
+    background-image: var( --background_banner_image );
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.filtering{
+    height: 26rem;
+    position: relative;
+    margin-top: -26rem;
+    z-index: 25;
+    background: rgba(111, 45, 189, 0.5);
+    mix-blend-mode: overlay;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 12px 12px;
+}
+
+.text-banner{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    position: relative;
+    color: white;
+    z-index: 45;
+}
+
+.text-banner-desktop{
+    margin-top: -9rem;
+    text-align: end;
+}
+
+.text-banner-mobile{
+    margin-top: -5rem;
+    text-align: start;
+}

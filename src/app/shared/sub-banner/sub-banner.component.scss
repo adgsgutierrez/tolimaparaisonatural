@@ -1,0 +1,31 @@
+.container-personalize{
+    background-image: url('/assets/imgs/banner_green.svg');
+    background-size: cover;
+    margin-top: -2rem;
+}
+
+.base-text{
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #FFFFFF;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.title{
+    @extend .base-text;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 5rem;
+    margin-bottom: 1.25rem;
+}
+
+.content{
+    @extend .base-text;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: justify;
+    margin-bottom: 3rem;
+}
