@@ -5,21 +5,20 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.6rem 5rem;
+    padding: 10px;
     gap: 10px;
 }
 
-.nav-link{
+.nav-link {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
     line-height: 23px;
-
     color: #000000;
 }
 
-.active{
+.active {
     text-underline-offset: 6px;
     text-decoration: underline #9AD239;
 }
@@ -32,4 +31,63 @@ nav {
     line-height: 23px;
 
     color: #000000;
+}
+
+.menu-responsive {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    nav {
+        .container-fluid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            a {
+                width: 50%;
+            }
+            ul {
+                align-items: flex-end;
+            }
+        }
+    }
+
+    $transition-collapse: height .35s ease;
+    $transition-collapse-width: width .35s ease;
+
+    .collapse {
+        &:not(.show) {
+            display: none;
+        }
+    }
+
+    .collapsing {
+        height: 0;
+        overflow: hidden;
+
+        &.collapse-horizontal {
+            width: 0;
+            height: auto;
+        }
+    }
+
+    .menu-responsive {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        button {
+            border: none;
+            background-color: #FFFFFF;
+            width: 45px;
+            align-self: self-end;
+        }
+    }
+
+    .align{text-align: -webkit-right;}
+
+    .menu-desk {
+        display: none;
+    }
 }

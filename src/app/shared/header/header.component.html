@@ -1,27 +1,44 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img
-        [src]="'/assets/imgs/icon.svg'"
-        alt="Logo"
-        width="30"
-        height="24"
-        class="d-inline-block align-text-top"
-      />
+      <img [src]="'/assets/imgs/icon.svg'" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
       Tolima paraiso natural
     </a>
-    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-      <ul class="navbar-nav me-2 mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link {{getClassActive('/')}}" aria-current="page" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{getClassActive('/detail')}}" aria-current="page" href="#heart_touristic">Destinos turísticos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" target="_blank" href="https://api.whatsapp.com/send?phone=573128921117&text=Hola!!!%0A😁😁%20Quiero%20conocer%20mas%20sobre%20la%20iniciativa%20_Tolima%20paraiso%20natural_😁😁">Contáctanos</a>
-        </li>
-      </ul>
+    <div class="menu-responsive">
+      <button type="button" (click)="handleClick()" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false"
+        aria-controls="navbarSupportedContent"><img [src]="iconFileName" alt="Icono"></button>
+
+      <div class="collapse multi-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link {{getClassActive('/')}}" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item align ">
+            <a class="nav-link {{getClassActive('/detail')}}" aria-current="page" href="#heart_touristic">Destinos
+              turísticos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" target="_blank"
+              href="https://api.whatsapp.com/send?phone=573128921117&text=Hola!!!%0A😁😁%20Quiero%20conocer%20mas%20sobre%20la%20iniciativa%20_Tolima%20paraiso%20natural_😁😁">Contáctanos</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="menu-desk">
+      <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link {{getClassActive('/')}}" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{getClassActive('/detail')}}" aria-current="page" href="#heart_touristic">Destinos turísticos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" target="_blank" href="https://api.whatsapp.com/send?phone=573128921117&text=Hola!!!%0A😁😁%20Quiero%20conocer%20mas%20sobre%20la%20iniciativa%20_Tolima%20paraiso%20natural_😁😁">Contáctanos</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
