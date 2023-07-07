@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SubBannerComponent } from './sub-banner/sub-banner.component';
 import { RouterModule } from '@angular/router';
 import { SectionInformativeComponent } from './section-informative/section-informative.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SectionInformativeComponent } from './section-informative/section-infor
     BannerComponent,
     FooterComponent,
     SubBannerComponent,
-    SectionInformativeComponent
+    SectionInformativeComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,

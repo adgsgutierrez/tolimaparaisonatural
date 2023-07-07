@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { IDetailSite } from 'src/app/models/information/m.information';
 
 @Component({
@@ -14,5 +14,4 @@ export class SectionInformativeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

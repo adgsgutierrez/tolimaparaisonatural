@@ -1,4 +1,16 @@
 <section>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" #carousel>
+        <ul class="carousel-indicators">
+            <li *ngFor="let card of detail?.images; let i = index" [class.active]="i === 0"
+                data-target="#carouselExampleIndicators" [attr.data-slide-to]="i"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item" *ngFor="let card of detail?.images; let i = index" [class.active]="i === 0">
+                <img class="d-block w-100" [src]="card" alt="Slide {{i}}">
+            </div>
+        </div>
+    </div>
+
     <div class="row mt-3">
         <div class="col">
             <p class="title-subseccion">{{detail?.title}}</p>
@@ -10,9 +22,9 @@
             <app-card [card]="card"></app-card>
         </div>
     </div>
-    <div class="row mt-3 " *ngIf="detail?.images">
+    <!-- <div class="row mt-3 " *ngIf="detail?.images">
         <div [class]="'grid-image-'+detail?.images?.length" >
             <img [class]="'img-'+detail?.images?.length+'-'+(i+1)" *ngFor="let card of detail?.images;let i=index" [src]="card"/>
         </div>
-    </div>
+    </div> -->
 </section>
