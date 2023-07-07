@@ -124,18 +124,33 @@
     grid-template-rows: repeat(2, 1fr) repeat(3, 0fr);
 }
 
-.carousel-indicators li {
-    background-color: rgba(218, 238, 250, 1);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    cursor: pointer;
-}
-.carousel-indicators {
-    list-style-type: none;
+.carousel {
+    display: none;
 }
 
-.carousel-indicators .active {
-    background-color: rgba(154, 210, 57, 1);
+@media (max-width: 990px) {
+    .img-cards {
+        display: none;
+    }
+
+    .carousel {
+        display: block;
+        padding: 0;
+    }
+
+    .carousel-indicators li {
+        background-color: rgba(218, 238, 250, 1);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .carousel-indicators {
+        list-style-type: none;
+    }
+    
+    .carousel-indicators .active {
+        background-color: rgba(154, 210, 57, 1);
+    }
 }
