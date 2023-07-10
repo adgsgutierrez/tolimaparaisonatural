@@ -1,15 +1,5 @@
 <section>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" #carousel>
-        <ul class="carousel-indicators">
-            <li *ngFor="let card of detail?.images; let i = index" [class.active]="i === 0"
-                data-target="#carouselExampleIndicators" [attr.data-slide-to]="i"></li>
-        </ul>
-        <div class="carousel-inner">
-            <div class="carousel-item" *ngFor="let card of detail?.images; let i = index" [class.active]="i === 0">
-                <img class="d-block w-100" [src]="card" alt="Slide {{i}}">
-            </div>
-        </div>
-    </div>
+    <app-carousel class="carousel" [detail]="detail"></app-carousel>
 
     <div class="row px-5 mt-3">
         <div class="col">

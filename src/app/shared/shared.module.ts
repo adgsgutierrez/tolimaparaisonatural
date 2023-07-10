@@ -30,7 +30,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     BannerComponent,
     FooterComponent,
     SubBannerComponent,
-    SectionInformativeComponent
+    SectionInformativeComponent,
+    CarouselComponent
   ]
 })
 export class SharedModule { }

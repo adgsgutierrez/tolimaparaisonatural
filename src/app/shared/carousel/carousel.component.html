@@ -1,1 +1,10 @@
-<p>carousel works!</p>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" #carousel>
+    <ul class="carousel-indicators">
+        <li [class.active]="i === activeSlideIndex" *ngFor="let card of detail?.images; let i = index" (click)="activeSlideIndex = i"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item" [class.active]="i === activeSlideIndex" *ngFor="let card of detail?.images; let i = index">
+            <img class="d-block w-100" [src]="card" alt="Slide {{i}}">
+        </div>
+    </div>
+</div>

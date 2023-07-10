@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IDetailSite } from 'src/app/models/information/m.information';
 
 @Component({
   selector: 'app-carousel',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CarouselComponent {
 
+  @Input() detail: IDetailSite | undefined;
+
+  activeSlideIndex: number = 0;
+  
 }
