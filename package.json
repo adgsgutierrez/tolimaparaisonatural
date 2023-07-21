@@ -25,6 +25,8 @@
     "bootstrap": "^5.2.3",
     "firebase": "9.9.1",
     "jquery": "^3.6.4",
+    "line-clamp": "^1.0.0",
+    "ngx-bootstrap": "^10.2.0",
     "ngx-indexed-db": "^16.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

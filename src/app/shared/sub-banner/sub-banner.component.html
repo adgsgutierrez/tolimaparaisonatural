@@ -1,4 +1,8 @@
 <section class="container-fluid p-3 container-personalize">
     <div class="title" [innerHTML]="title"></div>
-    <div class="content" [innerHTML]="content"></div>
+    <div id="description" class="content" [ngClass]="{'expanded': expanded}">
+        <p [ngStyle]="{'-webkit-line-clamp': expanded ? 'none' : '5'}">{{ content }}</p>
+        <button class="ver-mas"  (click)="toggleExpand()">{{ expanded ? 'Ver menos' : 'Ver más' }}
+        </button>
+    </div>
 </section>

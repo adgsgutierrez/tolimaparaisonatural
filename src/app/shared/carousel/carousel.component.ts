@@ -12,4 +12,11 @@ export class CarouselComponent {
 
   activeSlideIndex: number = 0;
   
+  ngAfterViewInit() {
+    setInterval(() => {
+      if (this.detail && this.detail.images) {
+        this.activeSlideIndex = (this.activeSlideIndex + 1) % this.detail.images.length;
+      }
+    }, 3000);
+  }
 }
