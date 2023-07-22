@@ -1,8 +1,9 @@
 <section class="container-fluid p-3 container-personalize">
     <div class="title" [innerHTML]="title"></div>
-    <div id="description" class="content" [ngClass]="{'expanded': expanded}">
-        <p [ngStyle]="{'-webkit-line-clamp': expanded ? 'none' : '5'}">{{ content }}</p>
-        <button class="ver-mas"  (click)="toggleExpand()">{{ expanded ? 'Ver menos' : 'Ver más' }}
-        </button>
+    <div id="description" class="content" [ngClass]="{ 'expandable-text' : expanded }">
+        <p #expandableTextElement >{{ content }}</p>
+    </div>
+    <div class="content" >
+        <button *ngIf="showButton" class="btn btn-outline-light" (click)="toggleExpand()">{{ expanded ? 'Ver más' : 'Ver menos' }}</button>
     </div>
 </section>

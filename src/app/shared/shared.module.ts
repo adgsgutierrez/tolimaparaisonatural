@@ -8,6 +8,14 @@ import { SubBannerComponent } from './sub-banner/sub-banner.component';
 import { RouterModule } from '@angular/router';
 import { SectionInformativeComponent } from './section-informative/section-informative.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import * as Hammer from 'hammerjs';
+import { HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser';
+
+export class MyHammerConfig extends HammerGestureConfig {
+  override = <any> {
+    swipe: { direction: Hammer.DIRECTION_ALL },
+  };
+}
 
 
 @NgModule({
@@ -22,6 +30,7 @@ import { CarouselComponent } from './carousel/carousel.component';
   ],
   imports: [
     CommonModule,
+    HammerModule,
     RouterModule
   ],
   exports: [
@@ -32,6 +41,12 @@ import { CarouselComponent } from './carousel/carousel.component';
     SubBannerComponent,
     SectionInformativeComponent,
     CarouselComponent
-  ]
+  ],
+  providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig,
+    },
+  ],
 })
 export class SharedModule { }

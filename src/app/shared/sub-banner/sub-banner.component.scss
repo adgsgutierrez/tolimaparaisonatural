@@ -28,21 +28,9 @@
     line-height: 28px;
     text-align: justify;
     margin-bottom: 3rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
-.ver-mas {
-    background: none;
-    border: none;
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.expandable-text p {
+.expandable-text {
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;

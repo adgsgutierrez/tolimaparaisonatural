@@ -2,9 +2,9 @@
     <ul class="carousel-indicators">
         <li [class.active]="i === activeSlideIndex" *ngFor="let card of detail?.images; let i = index" (click)="activeSlideIndex = i"></li>
     </ul>
-    <div class="carousel-inner">
+    <div class="carousel-inner" (swipeleft)="swipeleftActive($event)" (swipeRight)="swipeRightActive($event)">
         <div class="carousel-item" [class.active]="i === activeSlideIndex" *ngFor="let card of detail?.images; let i = index">
-            <img class="d-block w-100" [src]="card" alt="Slide {{i}}">
+            <img (load)="loadImage(1)" #carouselImages class="d-block w-100" alt="Slide {{i}}">
         </div>
     </div>
 </div>

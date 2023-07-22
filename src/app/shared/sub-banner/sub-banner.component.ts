@@ -12,14 +12,13 @@ export class SubBannerComponent {
 
   public expanded: boolean = false;
   public showButton: boolean = false;
-  public maxCharacters: number = 0;
 
   @ViewChild('expandableTextElement') expandableTextElement!: ElementRef<HTMLDivElement>;
 
-  constructor(private elementRef: ElementRef, private cdRef: ChangeDetectorRef) { }
+  constructor(private cdRef: ChangeDetectorRef) { }
 
-  ngAfterViewChecked() {
-    this.checkShowMoreButton();
+  ngAfterViewInit(): void {
+    setTimeout(() => {  this.checkShowMoreButton(); } , 500);
   }
 
   toggleExpand() {
@@ -27,16 +26,13 @@ export class SubBannerComponent {
   }
 
   private checkShowMoreButton() {
-    const parrafo = this.elementRef.nativeElement.querySelector('#description');
-    const lineHeight = parseInt(getComputedStyle(parrafo).lineHeight);
-    const height = parrafo.offsetHeight;
-    const lineCount = Math.ceil(height / lineHeight);
-    this.maxCharacters = lineCount;
-    if (this.maxCharacters > 5) {
-      console.log("holi");
-      this.showButton = true;
-    }
-
+    const parrafoElement = this.expandableTextElement.nativeElement;
+    const computedStyle = getComputedStyle(parrafoElement);
+    const lineHeight = parseInt(computedStyle.lineHeight, 10);
+    const alturaParrafo = parrafoElement.clientHeight;
+    const numeroLineas = Math.floor(alturaParrafo / lineHeight);
+    this.showButton = (numeroLineas >= 5);
+    this.expanded = this.showButton;
     this.cdRef.detectChanges();
   }
 }
